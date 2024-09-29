@@ -1,8 +1,11 @@
 ---
-import '@fontsource/cormorant-garamond/400.css';
+// Supports weights 100-900
+import '@fontsource-variable/inter';
 import '@fontsource/cormorant-garamond/700.css';
 // Supports weights 200-800
 import '@fontsource-variable/manrope';
+
+import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
 	title: string;
@@ -12,7 +15,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -20,6 +23,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body class="font-body">
 		<slot />
@@ -27,6 +31,28 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
+	.custom-select {
+    background-color: #F4F5F6;
+    border: 1px solid #E9EBED;
+    border-radius: 0.375rem; /* Ajusta según tu diseño */
+    padding: 0.75rem; /* Espaciado interno */
+    color: #2E3438;
+    appearance: none; /* Elimina el estilo por defecto del navegador */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%232E3438"><path d="M5.23 7.21a.75.75 0 011.06 0L10 10.586l3.71-3.37a.75.75 0 011.06 1.06l-4.25 4a.75.75 0 01-1.06 0l-4.25-4a.75.75 0 010-1.06z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center; /* Posición del icono */
+    background-size: 1.5em;
+    transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.custom-select:focus {
+    border-color: #EA5075; /* Cambia el color del borde al enfocar */
+    background-color: #F9F9F9; /* Cambia el fondo para el enfoque */
+    outline: none; /* Elimina el outline por defecto */
+}
 	code {
 		font-family:
 			Menlo,

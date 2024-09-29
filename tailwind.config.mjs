@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         title: ['Cormorant Garamond', ...defaultTheme.fontFamily.sans],
+        inter:['Inter',...defaultTheme.fontFamily.sans],
         body:["Manrope",...defaultTheme.fontFamily.sans]
       },
     },

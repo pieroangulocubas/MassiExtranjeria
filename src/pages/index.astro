@@ -5,41 +5,116 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="MASSI - ASESORIA EN EXTRANJERIA ">
 	<main
-		class="relative w-full h-screen flex flex-col gap-3 items-center text-center justify-center bg-[#131A20]"
+		class="relative w-full h-screen text-center flex justify-center items-center bg-[url('/images/bg-stars.jpg')]"
 	>
-		<div class="flex flex-col justify-center items-center gap-4">
-			<HeroLogo class="h-auto w-[120px] md:w-[150px]" />
-			<h1
-				class="font-title font-bold text-4xl md:text-[48px] bg-gradient-to-t from-[#916919] to-[#F7B32B] bg-clip-text text-transparent"
+		<!-- NUMERO DE TELEFONO DE MASSI EXTRANJERIA -->
+		<a
+			href="tel:+34614224218"
+			class="absolute flex gap-3 items-center justify-center top-10 md:top-8 text-white font-bold text-2xl md:text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,.7)]"
+		>
+			<strong>+34 614 22 42 18</strong>
+			<img src="/icons/smartphone.svg" class="h-auto w-[32px]" alt="" />
+		</a>
+		<!-- BOTON PARA FUNCIONALIAD DE CITAS EN EL CONSULADO -->
+		<a
+			href="/cita-consulado-peru"
+			class="absolute top-24 text-red-600 text-[12px] md:text-sm font-bold uppercase py-3 px-6 bg-white rounded-tl-lg rounded-br-lg neon-glow neon-glow-hover"
+		>
+			Saca tu cita en el Consulado del Perú
+		</a>
+
+		<div class="flex flex-col items-center justify-center">
+			<!-- Logo + Titulo + Mensaje -->
+			<div class="flex flex-col justify-center items-center gap-3">
+				<HeroLogo class="h-auto w-[100px] md:w-[120px]" />
+				<h1
+					class="font-title font-bold text-[32px] md:text-[48px] bg-gradient-to-t from-[#916919] to-[#F7B32B] bg-clip-text text-transparent"
+				>
+					MASSI EXTRANJERIA
+				</h1>
+			</div>
+			<p
+				class="w-[90%] md:w-[60%] font-[300] text-[#C8CDD0] text-sm md:text-base"
 			>
-				MASSI EXTRANJERIA
-			</h1>
+				Estamos construyendo nuestra web, pero mientras tanto puedes
+				contactarnos para cualquier consulta o asistencia personalizada.
+				<strong class="font-semibold">
+					¡Seguimos ayudando a muchas personas con eficacia y seguridad en trámites como
+					Asilo, Canje de licencia, Arraigos, Renovaciones,
+					Nacionalidad, Homologaciones y mucho más!</strong>
+			</p>
 		</div>
-		<p class="text-md w-[90%] md:w-[50%] font-[300] text-[#C8CDD0]">
-			Mientras finalizamos nuestra web, puedes contactarnos para cualquier
-			consulta o asistencia personalizada. <strong class="font-semibold">¡Estamos listos para ayudarte a
-				resolver tus trámites con rapidez y confianza!
-			</p></strong>
-		<div class="absolute flex flex-col gap-3 bottom-12">
-			<strong class="text-[#C8CDD0] text-md drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">Contáctanos por:</strong>
+
+		<!-- Contáctanos -->
+		<div
+			class="absolute flex flex-col gap-3.5 items-center justify-center bottom-8"
+		>
+			<strong
+				class="text-white text-base md:text-lg drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]"
+				>Contáctanos</strong
+			>
 			<nav class="flex gap-5 items-center transition">
-				<a href="https://facebook.com/massiextranjeria" target="_blank" class="hover:scale-95">
-					<img class="h-auto w-[28px]" src="/icons/facebook.svg" alt="">
+				<a
+					href="https://facebook.com/massiextranjeria"
+					target="_blank"
+					class="hover:scale-95"
+				>
+					<img
+						class="h-auto w-[22px] md:w-[28px]"
+						src="/icons/facebook.svg"
+						alt=""
+					/>
 				</a>
-				<a href="https://tiktok.com/@massiextranjeria"  target="_blank" class="hover:scale-95">
-					<img class="h-auto w-[24px]" src="/icons/tiktok.svg" alt="">
+				<a
+					href="https://tiktok.com/@massiextranjeria"
+					target="_blank"
+					class="hover:scale-95"
+				>
+					<img
+						class="h-auto w-[20px] md:w-[24px]"
+						src="/icons/tiktok.svg"
+						alt=""
+					/>
 				</a>
-				<a href="mailto: asesoria@massiextranjeria.com"  target="_blank" class="hover:scale-95">
-					<img class="h-auto w-[28px]" src="/icons/gmail.svg" alt="" >
+				<a
+					href="mailto: asesoria@massiextranjeria.com"
+					target="_blank"
+					class="hover:scale-95"
+				>
+					<img
+						class="h-auto w-[22px] md:w-[28px]"
+						src="/icons/gmail.svg"
+						alt=""
+					/>
 				</a>
-				<a href="https://wa.me/34614224218"  target="_blank" class="hover:scale-95">
-					<img class="h-auto w-[28px]" src="/icons/whatsapp.svg" alt="">
+				<a
+					href="https://wa.me/34614224218"
+					target="_blank"
+					class="hover:scale-95"
+				>
+					<img
+						class="h-auto w-[22px] md:w-[28px]"
+						src="/icons/whatsapp.svg"
+						alt=""
+					/>
 				</a>
 			</nav>
 		</div>
-		<a href="tel:+34614224218" class="absolute top-10 text-[#C8CDD0] text-3xl drop-shadow-[0_0_10px_rgba(255,255,255,0.7)]">
-			<strong>+34 614 22 42 18</strong>
-			<p class=>Llámanos</p>
-		</a>
 	</main>
 </Layout>
+
+<style>
+	.neon-glow {
+		box-shadow:
+			0 0 12px rgba(220, 38, 38, 0.75),
+			0 0 30px rgba(220, 38, 38, 0.5),
+			0 0 45px rgba(220, 38, 38, 0.75); /* Red Glow */
+		transition: box-shadow 0.3s ease-in-out;
+	}
+	.neon-glow-hover:hover {
+		box-shadow:
+			0 0 18px rgba(220, 38, 38, 1),
+			0 0 60px rgba(220, 38, 38, 0.75),
+			0 0 90px rgba(220, 38, 38, 1);
+	}
+</style>
